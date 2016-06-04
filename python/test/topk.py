@@ -6,7 +6,7 @@ class Solution(object):
         :rtype: List[int]
         """
         d = {}
-        for item in nums:
+        for item in set(nums):
             d[item] = nums.count(item)
 
         re = sorted(d.iteritems(),key=lambda d:d[1],reverse=True)
@@ -29,7 +29,7 @@ if __name__ == '__main__':
     lst = [5,1,1,1,1,2,2,3]
     lst2 = [4,1,-1,2,-1,2,3]
     d = {}
-    for item in lst2:
+    for item in set(lst2):
             d[item] = lst2.count(item)
     re = sorted(d.iteritems(),key=lambda d:d[1],reverse=True)
     print re
