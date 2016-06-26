@@ -10,13 +10,7 @@ public:
         int len = s.length();
         char tmp;
 
-        /*
-        printf("The str len:%d\n",len);
-        for(int i=0;i<len;i++){
-           printf("%c.",s[i]);
-        }
-        cout << endl;
-         */
+
 
         int k = len-1;
         for(int i=0;i<len;i++){
@@ -34,7 +28,6 @@ public:
                }
            }
         }
-//        cout << endl << s;
         return s;
     }
 };
