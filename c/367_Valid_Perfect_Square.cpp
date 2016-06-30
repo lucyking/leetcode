@@ -2,7 +2,38 @@
 
 using namespace std;
 
+
+#include <iostream>
+
+using namespace std;
+
 class Solution {
+public:
+    bool isPerfectSquare(int num) {
+        if(num==1 || num==4)
+            return true;
+        else
+            return power(1,num,num);
+    }
+
+
+    bool power(int a,int b,int c){
+        if(b<=a)
+            return false;
+        long int k = (a+b)/2;
+        if(k==a)
+            return false;
+        if(k*k==c ||(k+1)*(k+1)==c)
+            return true;
+        if(k*k>c)
+            return power(a,k,c);
+        else
+            return power(k,b,c);
+    }
+};
+
+
+class Solution2 {
 public:
     bool isPerfectSquare(int num) {
         return power(0,num,num);
