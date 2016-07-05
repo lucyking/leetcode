@@ -16,7 +16,7 @@ public:
             x = x / 10;
         }
 
-        if(result > INT32_MAX )
+        if(result > INT32_MAX )                       // <-- overflow filter
             return -1;
         result = (int)result;
 
@@ -32,6 +32,6 @@ int main() {
     cout << Alpha.reverse(100) <<endl;
     cout << Alpha.reverse(101) <<endl;
     cout << Alpha.reverse(-101) <<endl;
-    cout << Alpha.reverse(1534236469) <<endl;
+    cout << Alpha.reverse(1534236469) <<endl;        // <--signned int overflow
     return 0;
 }
