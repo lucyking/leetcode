@@ -6,14 +6,12 @@ class Solution(object):
         :rtype: int
         """
         if m>n:
-            swap(m,n)
+            m,n = n,m
         return self.Cn(m-1,n+m-2)
-    
+
     def Cn(self,m,n):
         r1=r2=1
-        for i in m:
+        for i in xrange(m):
             r2*=i+1
-        for j in n:
-            r1*=j+1
+            r1*=n-i
         return r1/r2
-            
