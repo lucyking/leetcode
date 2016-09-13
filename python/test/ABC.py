@@ -17,12 +17,6 @@ class Solution(object):
         return re
 
 
-
-
-        return l2
-
-
-
 if __name__ == "__main__":
     s=Solution()
     sub = s.fx(3)
@@ -42,20 +36,3 @@ if __name__ == "__main__":
                 break
     print sum
     print '>>>',len(flist)-sum
-
-
-# test case
-    l3= [[], ['A'], ['B'], ['C'], ['A', 'A'], ['A', 'B'],['A','A','A']]
-    re=[]
-
-    print ['A'] in l3
-    print type(l3[-1])
-    print ''.join(str(l3[-1]))
-
-    for item in l3:
-        if len(item)==3:
-            re.append(item)
-
-    print re
-    # l33=filter(lambda x:len(x)!=3,l3)
-    # print l33
