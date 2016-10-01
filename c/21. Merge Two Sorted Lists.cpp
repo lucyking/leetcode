@@ -38,10 +38,8 @@ public:
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
         ListNode a=ListNode(0);
         ListNode* tmp=&a;
-        // tmp=getNext(l1,l2);
-        while(getNext(l1,l2,tmp)){
-
-        }
+        
+        while(getNext(l1,l2,tmp)){}
 
         return a.next;
 
