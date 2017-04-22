@@ -7,15 +7,18 @@ public:
         int index_re = 0,index_1=0, index_2=0;
         if(m>n) {
             while(index_2<n) {
-                if(nums1[index_1]<nums2[index_2]) {
+                if(nums1[index_1]<nums2[index_2] && index_1<m) {
                     re.push_back(nums1[index_1]);
                     ++index_1;
-                }else if(nums1[index_1]==nums2[index_2]){
-                    re.push_back(nums1[index_1]);
-                    ++index_1;
-                    ++index_2;
-
                 }
+                    /*
+                    else if(nums1[index_1]==nums2[index_2]){
+                        re.push_back(nums1[index_1]);
+                        ++index_1;
+                        ++index_2;
+
+                    }
+                    */
                 else{
                     re.push_back(nums2[index_2]);
                     ++index_2;
@@ -31,14 +34,17 @@ public:
 
         }else {
             while (index_1 < m) {
-                if (nums1[index_1] < nums2[index_2]) {
+                if (nums1[index_1] < nums2[index_2] && index_2<n) {
                     re.push_back(nums1[index_1]);
                     ++index_1;
-                }else if(nums1[index_1]==nums2[index_2]){
-                    re.push_back(nums1[index_1]);
-                    ++index_1;
-                    ++index_2;
                 }
+                    /*
+                    else if(nums1[index_1]==nums2[index_2]){
+                        re.push_back(nums1[index_1]);
+                        ++index_1;
+                        ++index_2;
+                    }
+                    */
                 else {
                     re.push_back(nums2[index_2]);
                     ++index_2;
@@ -54,6 +60,7 @@ public:
         }
     }
 };
+
 
 int main(){
     Solution s;
