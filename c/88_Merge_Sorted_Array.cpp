@@ -18,8 +18,9 @@ public:
         return false;
     }
 
-    void appendRe(vector<int>& re, vector<int> ref, int index){
-        while(ref[index]!=0){
+    void appendRe(vector<int>& re, vector<int> ref, int index, int ref_size){
+        //while(ref[index]!=0 && index<ref.size()){
+        while(index<ref_size){
             re.push_back(ref[index]);
             ++index;
         }
@@ -71,11 +72,14 @@ public:
         }
 
         if(flag == 1){
-            appendRe(re,nums2,index_2);
+            appendRe(re,nums2,index_2,n);
         }
         else if(flag == 2){
-            appendRe(re,nums1,index_1);
+            appendRe(re,nums1,index_1,m);
         }
+
+        while (re.size()<nums1.size())
+            re.push_back(0);
 
 
         nums1 = re;
